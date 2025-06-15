@@ -45,7 +45,7 @@ jobs:
          NEW_VERSION: ${{ steps.version.outputs.version }}
        run: |
          docker push batral/docker-graphql:$NEW_VERSION
-         docker build --tag batral/docker-graphql:latest
+         docker push batral/docker-graphql:latest
          
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
